@@ -12,6 +12,7 @@
 
   @media (max-width: $vp-mobile) {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   &__item {

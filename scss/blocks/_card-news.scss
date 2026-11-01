@@ -2,17 +2,19 @@
   outline: none;
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
   overflow: hidden;
 
   &--size-xl {
     flex-direction: row;
     background: $color-solitude-2;
     gap: 32px;
+    border-radius: 16px;
 
     @media (max-width: $vp-mobile) {
       flex-direction: column;
       background-color: unset;
+      gap: 0;
+      border-radius: 0;
     }
 
     &__content {
@@ -52,6 +54,12 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 16px;
+
+    @media (max-width: $vp-mobile) {
+      font-size: 12px;
+      gap: 15px;
+      margin: 0 0 10px 0;
+    }
   }
 
   &__views,
@@ -70,11 +78,22 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+
+    @media (max-width: $vp-mobile) {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 0 10px 0;
+    }
   }
 
   &__text {
     margin: 0;
     font-size: 15px;
     line-height: 20px;
+
+    @media (max-width: $vp-mobile) {
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 }
