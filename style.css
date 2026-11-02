@@ -559,8 +559,31 @@ a {
   border-radius: 16px;
   overflow: hidden;
 }
+.card-news__box:hover::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
 .card-news__image {
   width: 100%;
+}
+.card-news__image-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background-color: none;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 .card-news__content {
   padding: 20px 0 0;
