@@ -10,19 +10,19 @@
     gap: 32px;
     border-radius: 16px;
 
+    & .card-news__content {
+      padding: 20px 32px 10px 0;
+    }
+
+    & .card-news__box-text {
+      border-radius: 16px 0 0 16px;
+    }
+
     @media (max-width: $vp-mobile) {
       flex-direction: column;
       background-color: unset;
       gap: 0;
       border-radius: 0;
-    }
-
-    &__content {
-      padding: 20px 32px;
-    }
-
-    &__box-text {
-      border-radius: 16px 0 0 16px;
     }
   }
 
@@ -31,17 +31,6 @@
     flex-shrink: 0;
     border-radius: 16px;
     overflow: hidden;
-
-    &:hover::after {
-      content: "";
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: $color-black-alpha;
-    }
   }
 
   &__image {
@@ -53,13 +42,13 @@
     font-size: 15px;
     line-height: 20px;
     color: $color-white;
-    background-color: none;
     z-index: 2;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
+    display: none;
   }
 
   &__content {
@@ -120,5 +109,25 @@
       font-size: 14px;
       line-height: 18px;
     }
+  }
+
+  &:hover &__box::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-black-alpha;
+  }
+
+  &:hover &__image-text {
+    display: flex;
+  }
+
+  &:hover &__heading {
+    color: $color-royal-blue;
+    ;
   }
 }
