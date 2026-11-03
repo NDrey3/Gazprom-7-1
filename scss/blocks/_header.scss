@@ -25,6 +25,14 @@
     font-size: 13px;
     font-weight: 500;
     line-height: 16px;
+
+    &:hover {
+      color: $color-white-alpha-50;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 
   &__bottom {
@@ -36,7 +44,7 @@
     @media (max-width: $vp-tablet) {
       padding: 13px 0;
     }
-    
+
     @media (max-width: $vp-mobile) {
       padding: 15px 0;
     }
@@ -44,12 +52,20 @@
 
   &__logo {
     flex-shrink: 0;
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 
   &__buttons {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    &:focus-visible {
+      outline: none;
+    }
   }
 
   &__button {
@@ -83,8 +99,11 @@
       height: 40px;
       width: 40px;
       padding: 0;
-      margin-right: 16px;
       cursor: pointer;
+
+      @media (max-width: $vp-tablet) {
+        margin-right: 16px;
+      }
 
       @media (max-width: $vp-mobile) {
         display: none;

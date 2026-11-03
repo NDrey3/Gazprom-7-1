@@ -23,5 +23,14 @@
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
+
+    &:hover {
+      color: $color-royal-blue;
+    }
+
+    &:focus-visible {
+      outline: none;
+      color: $color-royal-blue;
+    }
   }
 }

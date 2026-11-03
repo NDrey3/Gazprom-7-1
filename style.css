@@ -424,6 +424,12 @@ a {
   font-weight: 500;
   line-height: 16px;
 }
+.header__link:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.header__link:focus-visible {
+  outline: none;
+}
 .header__bottom {
   display: flex;
   justify-content: space-between;
@@ -443,10 +449,16 @@ a {
 .header__logo {
   flex-shrink: 0;
 }
+.header__logo:focus-visible {
+  outline: none;
+}
 .header__buttons {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.header__buttons:focus-visible {
+  outline: none;
 }
 .header__button {
   outline: none;
@@ -477,8 +489,12 @@ a {
   height: 40px;
   width: 40px;
   padding: 0;
-  margin-right: 16px;
   cursor: pointer;
+}
+@media (max-width: 1023px) {
+  .header__button--qr {
+    margin-right: 16px;
+  }
 }
 @media (max-width: 767px) {
   .header__button--qr {
@@ -527,6 +543,13 @@ a {
   font-weight: 700;
   line-height: 24px;
 }
+.categories__link:hover {
+  color: #476BF0;
+}
+.categories__link:focus-visible {
+  outline: none;
+  color: #476BF0;
+}
 
 .card-news {
   outline: none;
@@ -541,7 +564,12 @@ a {
   border-radius: 16px;
 }
 .card-news--size-xl .card-news__content {
-  padding: 20px 32px 10px 0;
+  padding: 20px 32px 0 0;
+}
+@media (max-width: 767px) {
+  .card-news--size-xl .card-news__content {
+    padding: 15px 0 0 0;
+  }
 }
 .card-news--size-xl .card-news__box-text {
   border-radius: 16px 0 0 16px;
@@ -759,6 +787,7 @@ a {
   font-size: 12px;
   line-height: 16px;
   color: #1E222E;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .sidebar__button {
